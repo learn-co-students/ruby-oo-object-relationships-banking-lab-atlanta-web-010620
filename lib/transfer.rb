@@ -10,11 +10,12 @@ class Transfer
   end
 
   def valid?
-    if @sender.valid? && @receiver.valid? && @sender.balance >= @amount && @status == "pending"
-      return true
-    else
-      return false
-    end
+    @sender.valid? && @receiver.valid? && @sender.balance >= @amount && @status == "pending"
+    # if @sender.valid? && @receiver.valid? && @sender.balance >= @amount && @status == "pending"
+    #   return true
+    # else
+    #   return false
+    # end
   end
 
   def execute_transaction
